@@ -232,7 +232,7 @@ $(function() {
   function csvToArray(filename, cb) {
     $.get(filename, function(csvdata) {
       //CSVのパース作業
-      var csvdata = csvdata.replace("\r/gm", ""),
+      var csvdata = csvdata.replace(/\r/gm, ""),
           line = csvdata.split("\n"),
           ret = [];
       for (var i in line) {
@@ -257,8 +257,8 @@ $(function() {
 
         areaModels.push(area);
         //２列目以降の処理
-        for (var i = 2; i < 2 + 4; i++) {
-          var trash = new TrashModel(area_days_label[i], row[i]);
+        for (var r = 2; r < 2 + 4; r++) {
+          var trash = new TrashModel(area_days_label[r], row[r]);
           area.trash.push(trash);
         }
       }
@@ -339,6 +339,7 @@ $(function() {
     //TODO Android 2.3以下では見れない（代替の表示も含め）不具合が改善されてない。。
     //参考 http://satussy.blogspot.jp/2011/12/javascript-svg.html
     var ableSVG = (window.SVGAngle !== void 0);
+    ableSVG=false
     var areaModel = areaModels[row_index];
     var today = new Date();
     //直近の一番近い日付を計算します。
@@ -355,8 +356,9 @@ $(function() {
 
       for (var d_no in descriptions) {
         var description = descriptions[d_no];
-
-        if (description.label == trash.label) {
+        if (description.label != trash.label) {
+        	continue;
+        }
 
           var target_tag = "";
           var furigana = "";
@@ -416,7 +418,6 @@ $(function() {
             '<div class="targetDays"></div></div>' +
             "</div>" +
             "</div>";
-        }
       }
     }
 
