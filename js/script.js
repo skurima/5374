@@ -108,7 +108,7 @@ var TrashModel = function(_lable, _cell) {
         //week=0が第1週目です。
         for (var week = 0; week < 5; week++) {
           //4月1日を起点として第n曜日などを計算する。
-          var date = new Date(2013, month - 1, 1);
+          var date = new Date(2014, month - 1, 1);
           var d = new Date(date);
           //コンストラクタでやろうとするとうまく行かなかった。。
           //
