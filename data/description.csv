@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 label,sublabel,description,styles,bgcolor
 もやせない・危険,,,img/moyasanai02.svg,#733b96
 資源(紙、ペットボトル),,,img/shigen02.svg,#77ae1f
 もやせる,,,img/moyasu02.svg,#ea3b13
 資源(缶、びん),,,img/bin02.svg,#2dc7aa
-=======
-label,sublabel,description,styles,bgcolor
-燃やさないごみ,,,img/moyasanai02.svg,#733b96
-資源,,,img/shigen02.svg,#77ae1f
-燃やすごみ,,,img/moyasu02.svg,#ea3b13
-びん,,,img/bin02.svg,#2dc7aa
->>>>>>> codeforkanazawa-org/master
