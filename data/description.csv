@@ -1,5 +1,6 @@
 label,sublabel,description,styles,bgcolor
-もやせない・危険,,,img/moyasanai02.svg,#733b96
-資源(紙、ペットボトル),,,img/shigen02.svg,#77ae1f
-もやせる,,,img/moyasu02.svg,#ea3b13
-資源(缶、びん),,,img/bin02.svg,#2dc7aa
+もやせるごみ,,,img/moyasanai02.svg,#ea3b13
+もやせないごみ,,,img/shigen02.svg,#733b96
+資源(缶、びん),,,img/moyasu02.svg,#27a047
+資源(紙、ペットボトル),,,img/bin02.svg,#77ae1f
+危険ごみ,,,img/bin02.svg,#00b7c0
